@@ -1,0 +1,37 @@
+.Technology {
+  height: 100vh;
+  background: url(../assets/technology/background-technology-desktop.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  .Technology {
+    height: 100%;
+  }
+}
+
+.nav-control {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  height: 5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  margin: 1rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.active {
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=Technology.css.map */

@@ -1,0 +1,75 @@
+.Destination {
+  height: 100vh;
+  background: url("../assets/destination/background-destination-desktop.jpg")
+    no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 1400px) {
+    height: 100%;    
+  }
+  .inner-menu {    
+    img {
+      aspect-ratio: 1;
+      animation: planet-rotate 50s infinite forwards running;
+    }
+    @keyframes planet-rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .menu-list {
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .d-content {
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    .heading {
+      margin: 0 !important;
+      font-size: 1.2rem !important;
+      padding-top: 1rem;
+    }
+    .inner-menu {
+      flex-flow: column;
+      gap: 1.5rem;
+      .left {
+        .planet {
+          height: 15rem !important;
+          aspect-ratio: 1 !important;
+        }
+      }
+      .right-side-menu {
+        padding: 1rem !important;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        gap: 0 !important;
+        .planet-name {
+          font-size: 20vw !important;
+        }
+        hr{
+          margin: 2rem 0 !important;
+          height: 10px;
+          width: 100%;
+        }
+        .planet-stats {
+          flex-flow: column;
+          gap: 2rem;   
+          .key       {
+            font-size: 1.1rem !important;
+          }
+          .value{
+            font-size: 2.1rem !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.Crew {
+  height: 100vh;
+  background: url(../assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  .Crew {
+    height: 100%;
+  }
+}
+
+.Dot {
+  fill: #4b5563;
+}
+
+.active {
+  fill: white;
+}
+
+@media only screen and (min-width: 950px) {
+  .inner-crew {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .inner-crew #heading {
+    margin: 0 !important;
+    font-size: 1rem !important;
+  }
+}
+/*# sourceMappingURL=Crew.css.map */

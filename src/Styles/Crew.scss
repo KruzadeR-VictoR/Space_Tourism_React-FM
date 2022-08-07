@@ -1,0 +1,26 @@
+.Crew {
+  height: 100vh;
+  background: url(../assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+  @media screen and (max-width: 1400px) {
+    height: 100%;
+  }
+}
+
+.Dot {
+  fill: rgb(75, 85, 99);
+}
+
+.active {
+  fill: white;
+}
+
+@media only screen and (min-width: 950px) {
+  .inner-crew {
+    align-items: center !important;
+    #heading {
+      margin: 0 !important;
+      font-size: 1rem !important;
+    }
+  }
+}

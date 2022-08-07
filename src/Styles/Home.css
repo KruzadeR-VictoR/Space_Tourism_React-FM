@@ -1,0 +1,76 @@
+.Home {
+  height: 100vh;
+  background: url("../assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 950px) {
+  .Home {
+    background: url("../assets/home/background-home-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.Home main {
+  height: 100%;
+}
+
+@media (max-width: 950px) {
+  .Home main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+.Home main .intro {
+  padding: 0 13rem;
+}
+
+@media (max-width: 950px) {
+  .Home main .intro {
+    padding: 3rem 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .Home main .intro h3 {
+    font-size: 1rem;
+  }
+  .Home main .intro h1 {
+    font-size: 30vw !important;
+  }
+  .Home main .intro p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+  }
+}
+
+.Home main .explore .button {
+  cursor: pointer;
+  height: 15rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  background-color: white;
+  outline: 0px solid rgba(245, 245, 245, 0.1);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.Home main .explore .button:hover {
+  outline: 40px solid rgba(245, 245, 245, 0.2);
+}
+
+@media (max-width: 950px) {
+  .Home main .explore .button {
+    height: 10rem;
+  }
+}
+/*# sourceMappingURL=Home.css.map */
