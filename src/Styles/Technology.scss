@@ -1,7 +1,13 @@
 .Technology {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../assets/technology/background-technology-desktop.jpg);
   background-size: cover;
+
+  @media screen and (max-width: 950px) {
+    background: url(../assets/technology/background-technology-mobile.jpg)
+      no-repeat;
+    background-size: cover;
+  }
   @media screen and (max-width: 1400px) {
     height: 100%;
   }
@@ -24,4 +30,61 @@
 .active {
   background: white;
   color: black;
+}
+
+@media screen and (max-width: 950px) {
+  .inner-tech {
+    align-items: center;
+    padding-top: 1.5rem;
+    .heading {
+      margin: 0 !important;
+      font-size: 1.2rem !important;
+    }
+    .about-tech {
+      flex-flow: column-reverse;
+      align-items: center;
+      padding: 0rem !important;
+      justify-content: space-between;
+      .image {
+        img {
+          height: 15rem;
+          width: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+      .left {
+        flex-flow: column;
+        flex: 1;
+        .control {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          padding: 1rem 0;
+          .nav-control {
+            height: 3rem;
+            font-size: 1.2rem !important;
+          }
+        }
+        .about {
+          text-align: center;
+          padding: 1rem;
+          .title {
+            font-size: 1.2rem !important;
+            color: #d0d6f9 !important;
+          }
+          .name {
+            font-size: 2rem !important;
+            margin: 0.5rem 0 !important;
+          }
+          .desc {
+            font-size: 1.1rem !important;
+            color: #d0d6f9 !important;
+            padding: 1rem 0;
+          }
+        }
+      }
+    }
+  }
 }

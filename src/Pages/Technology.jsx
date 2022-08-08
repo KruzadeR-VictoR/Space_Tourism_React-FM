@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/Technology.css";
 import Navbar from "../Components/Navbar";
 import img from "../assets/technology/image-space-capsule-portrait.jpg";
@@ -6,6 +6,12 @@ import { Link, useParams } from "react-router-dom";
 
 function Technology({ data }) {
   const { name } = useParams();
+
+  const [Width, setWidth] = useState(window.innerWidth);
+
+  onresize = () => {
+    setWidth(window.innerWidth);
+  };
 
   const handleControl = () => {
     const arr = document.querySelectorAll(".nav-control");
@@ -43,7 +49,7 @@ function Technology({ data }) {
       <div className="Technology flex flex-col">
         <Navbar />
         <div className="inner-tech flex-1 flex flex-col gap-y-10">
-          <h1 className="text-3xl font-Barlow tracking-[2px] ml-[10rem] mt-[5rem] text-white">
+          <h1 className="heading text-3xl font-Barlow tracking-[2px] ml-[10rem] mt-[5rem] text-white">
             <span className="mr-5 text-gray-500">03</span> SPACE LAUNCH 101
           </h1>
           <div className="about-tech container mx-auto flex-1 flex items-center gap-x-10 px-[5rem]">
@@ -69,19 +75,23 @@ function Technology({ data }) {
                 </Link>
               </div>
               <div className="about">
-                <h1 className="font-Barlow text-xl text-gray-300 tracking-[1px]">
+                <h1 className="title font-Barlow text-xl text-gray-300 tracking-[1px]">
                   THE TERMINOLOGY...
                 </h1>
-                <h1 className="font-Bellefair text-6xl text-white my-5 whitespace-nowrap">
+                <h1 className="name font-Bellefair text-6xl text-white my-5 whitespace-nowrap">
                   {data[id].name.toUpperCase()}
                 </h1>
-                <p className="font-BarlowReg text-xl text-gray-300">
+                <p className="desc font-BarlowReg text-xl text-gray-300">
                   {data[id].description}
                 </p>
               </div>
             </div>
             <div className="image basis-1/2 h-full flex justify-center items-center">
-              <img src={data[id].images.portrait} alt="tch_image" />
+              {Width <= 590 ? (
+                <img src={data[id].images.landscape} alt="tch_image" />
+              ) : (
+                <img src={data[id].images.portrait} alt="tch_image" />
+              )}
             </div>
           </div>
         </div>

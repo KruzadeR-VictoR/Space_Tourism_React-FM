@@ -1,5 +1,5 @@
 .Crew {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../assets/crew/background-crew-desktop.jpg);
   background-size: cover;
 }
@@ -14,19 +14,87 @@
   fill: #4b5563;
 }
 
-.active {
-  fill: white;
+.mobile-divider {
+  display: none;
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (max-width: 950px) {
   .inner-crew {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
+    margin-top: 2rem;
   }
   .inner-crew #heading {
     margin: 0 !important;
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
+  }
+  .inner-crew .about-crew {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse;
+            flex-flow: column-reverse;
+  }
+  .inner-crew .about-crew .image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .inner-crew .about-crew .image img {
+    height: 20rem;
+  }
+  .inner-crew .about-crew .image .mobile-divider {
+    display: block;
+    height: 1px;
+    background: #9797977c;
+    border: none;
+    width: 90vw;
+  }
+  .inner-crew .about-crew .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem !important;
+  }
+  .inner-crew .about-crew .about .role {
+    font-size: 1.4rem !important;
+    -webkit-box-ordinal-group: 3 !important;
+        -ms-flex-order: 2 !important;
+            order: 2 !important;
+  }
+  .inner-crew .about-crew .about .name {
+    font-size: 2rem !important;
+    margin: 0 !important;
+    text-align: center;
+    -webkit-box-ordinal-group: 4 !important;
+        -ms-flex-order: 3 !important;
+            order: 3 !important;
+  }
+  .inner-crew .about-crew .about .description {
+    text-align: center;
+    font-size: 1.2rem !important;
+    margin: 1rem 0 !important;
+    color: #D0D6F9 !important;
+    -webkit-box-ordinal-group: 5 !important;
+        -ms-flex-order: 4 !important;
+            order: 4 !important;
+  }
+  .inner-crew .about-crew .about .controls {
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
+    padding: 1rem 0 2rem;
   }
 }
 /*# sourceMappingURL=Crew.css.map */

@@ -1,7 +1,14 @@
 .Destination {
-  height: 100vh;
+  min-height: 100vh;
   background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 950px) {
+  .Destination {
+    background: url(../assets/destination/background-destination-mobile.jpg) no-repeat;
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 1400px) {

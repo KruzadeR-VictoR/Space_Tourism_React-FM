@@ -1,12 +1,17 @@
 .Destination {
-  height: 100vh;
+  min-height: 100vh;
   background: url("../assets/destination/background-destination-desktop.jpg")
     no-repeat;
   background-size: cover;
-  @media screen and (max-width: 1400px) {
-    height: 100%;    
+  @media screen and (max-width: 950px) {
+    background: url(../assets/destination/background-destination-mobile.jpg)
+      no-repeat;
+    background-size: cover;
   }
-  .inner-menu {    
+  @media screen and (max-width: 1400px) {
+    height: 100%;
+  }
+  .inner-menu {
     img {
       aspect-ratio: 1;
       animation: planet-rotate 50s infinite forwards running;
@@ -54,18 +59,18 @@
         .planet-name {
           font-size: 20vw !important;
         }
-        hr{
+        hr {
           margin: 2rem 0 !important;
           height: 10px;
           width: 100%;
         }
         .planet-stats {
           flex-flow: column;
-          gap: 2rem;   
-          .key       {
+          gap: 2rem;
+          .key {
             font-size: 1.1rem !important;
           }
-          .value{
+          .value {
             font-size: 2.1rem !important;
           }
         }

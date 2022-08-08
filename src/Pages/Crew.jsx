@@ -42,12 +42,15 @@ function Crew({ data }) {
       <div className="Crew flex flex-col justify-between">
         <Navbar />
         <div className="inner-crew container mx-auto flex-1 flex flex-col">
-          <h1 className="heading text-3xl font-Barlow tracking-[2px] ml-[10rem] mt-[5rem] text-white" id="heading">
+          <h1
+            className="heading text-3xl font-Barlow tracking-[2px] ml-[10rem] mt-[5rem] text-white"
+            id="heading"
+          >
             <span className="mr-5 text-gray-500">02</span>MEET YOUR CREW
           </h1>
           <div className="about-crew flex-1 flex justify-center items-center gap-x-40 mt-10">
             <div className="about basis-1/3 py-4 px-[3rem]">
-              <h1 className="font-Bellefair text-4xl text-gray-400">
+              <h1 className="role font-Bellefair text-4xl text-gray-400">
                 {data[id].role.toUpperCase()}
               </h1>
               <h1 className="name font-Bellefair text-7xl leading-[1.3em] mt-7 text-white">
@@ -58,7 +61,7 @@ function Crew({ data }) {
               </p>
               <div className="controls flex gap-x-5">
                 <NavLink to="/Crew/Douglas Hurley">
-                  <FaCircle className="Dot active" />
+                  <FaCircle className="Dot" />
                 </NavLink>
                 <NavLink to="/Crew/Mark Shuttlewort">
                   <FaCircle
@@ -82,6 +85,7 @@ function Crew({ data }) {
             </div>
             <div className="image h-full flex items-end">
               <img src={data[id].images.png} alt="" />
+              <hr className="mobile-divider" />
             </div>
           </div>
         </div>
