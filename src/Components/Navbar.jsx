@@ -33,7 +33,7 @@ function Navbar({ margin }) {
         <div className="flex items-center justify-between relative ">
           <div className="logo ml-[4rem]" id="logo">
             <Link to="/">
-              <img src={Logo} alt="" />
+              <img src={Logo} alt="Space Tourism Logo" />
             </Link>
           </div>
           <button
@@ -43,9 +43,9 @@ function Navbar({ margin }) {
             onClick={toggleMenu}
           >
             {isOpen ? (
-              <Close color="white" size="2rem" />
+              <Close id="myNavbar" color="white" size="2rem" />
             ) : (
-              <HamburgerMenu color="white" size="2rem" />
+              <HamburgerMenu id="myNavbar" color="white" size="2rem" />
             )}
           </button>
 
